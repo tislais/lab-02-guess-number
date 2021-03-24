@@ -10,10 +10,8 @@ const guessButton = document.getElementById('guess-button');
 let guessesLeft = 4;
 let answer = Math.ceil(Math.random() * 20);
 
-console.log(guess);
 
 // set event listeners to update state and DOM
 guessButton.addEventListener('click', () => {
     guessesLeft--;
-    console.log(guess);
 });
