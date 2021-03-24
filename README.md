@@ -1,9 +1,32 @@
-## Making a plan
-1) Make a drawing of your app. Simple "wireframes"
-2) Once you have a drawing, name the HTML elements you'll need to realize your vision
-3) For each HTML element ask: Why do I need this?
-    - This is your pseudocode
-4) Once we know _why_ we need each element, think about how to implement the "Why" as a "How"
-5) Is there some state we need to initialize?
-6) Find all the 'events' (user clicks, form submit, etc) in your app. Ask one by one, "What happens when" for each of these events.
-7) Think about how to validate each of your steps
+# Tis's Plan
+
+## HTML Setup
+
+1. Div
+    - Why? Communicate instructions and rules.
+2. Input
+    - Why? Get user's guessed number
+    - How? Number input element
+3. Button
+    - Why? On click, will compare user's guessed number with winning number.
+    - How? addEventListener
+4. Div
+    - Why? Visual feedback of right or wrong
+    - How? someDiv.textContent
+5. Div 
+    - Why? To inform user of how many guesses they have remaining.
+    - How? someOtherDiv.textContent
+
+
+## Initialize State
+
+1. Guesses left
+    - guessesLeft
+
+## Events
+
+1. What happens when the user inputs a number and clicks the button?
+    - Decrement guessesLeft
+    - Compare guess with answer
+    - Inform user if it's right or wrong
+    - Inform user of guesses left
