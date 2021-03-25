@@ -20,11 +20,11 @@ guessButton.addEventListener('click', () => {
 
     // validate that input isn't empty
     if (!userGuess.value) {
-        alertDiv.textContent = "Enter a number my dude.";
+        alertDiv.textContent = 'Enter a number my dude.';
         console.log(guessesLeft);
         return;
     } else if (userGuess.value > 20 || userGuess.value < 0) {
-        alertDiv.textContent = "That number is not between 1 and 20!";
+        alertDiv.textContent = 'That number is not between 1 and 20!';
         console.log(guessesLeft);
         return;
     } else {
