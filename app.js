@@ -8,6 +8,7 @@ const guessButton = document.getElementById('guess-button');
 const evaluationDiv = document.getElementById('evaluation-div');
 const alertDiv = document.getElementById('alert');
 const replayButton = document.getElementById('replay-button');
+const instructions = document.getElementById('instructions');
 
 // initialize state
 let guessesLeft = 4;
@@ -39,14 +40,16 @@ guessButton.addEventListener('click', () => {
                 guessesLeftDiv.textContent = '';
                 guessButton.classList.add('hidden');
                 userGuess.classList.add('hidden');
+                instructions.classList.add('hidden');
                 replayButton.classList.remove('hidden');
             } else {
                 if (guessesLeft === 0) {
-                    evaluationDiv.textContent = 'GAME OVER.';
+                    evaluationDiv.textContent = 'YOU LOSE!';
                     guessesLeftDiv.textContent = `You have ${guessesLeft} guesses left.`;
                     guessesLeftDiv.textContent = '';
                     guessButton.classList.add('hidden');
                     userGuess.classList.add('hidden');
+                    instructions.classList.add('hidden');
                     replayButton.classList.remove('hidden');
                     return;
                 }
@@ -65,6 +68,7 @@ guessButton.addEventListener('click', () => {
 replayButton.addEventListener('click', () => {
     guessButton.classList.remove('hidden');
     userGuess.classList.remove('hidden');
+    instructions.classList.remove('hidden');
     replayButton.classList.add('hidden');
     userGuess.value = '';
     answer = Math.ceil(Math.random() * 20);

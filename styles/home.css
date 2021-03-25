@@ -16,7 +16,6 @@ body {
 .content {
     background-color: white;
     width: 400px;
-    height: 460px;
     flex-direction: column;
     justify-content: center;
     padding: 60px;
