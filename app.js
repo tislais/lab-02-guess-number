@@ -71,4 +71,4 @@ replayButton.addEventListener('click', () => {
     guessesLeft = 4;
     evaluationDiv.textContent = '';
     console.log(answer);
-})
+});
