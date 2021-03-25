@@ -20,11 +20,11 @@ guessButton.addEventListener('click', () => {
 
     // validate that input isn't empty
     if (!userGuess.value) {
-        alertDiv.textContent = 'Enter a number my dude.';
+        alertDiv.textContent = 'Enter a number.';
         console.log(guessesLeft);
         return;
-    } else if (userGuess.value > 20 || userGuess.value < 0) {
-        alertDiv.textContent = 'That number is not between 1 and 20!';
+    } else if (userGuess.value > 20 || userGuess.value <= 0) {
+        alertDiv.textContent = `${userGuess.value} is not between 1 and 20!`;
         console.log(guessesLeft);
         return;
     } else {
@@ -35,14 +35,14 @@ guessButton.addEventListener('click', () => {
             const guessScore = evaluateGuess(userGuess.value, answer);
             
             if (guessScore === 'correct') {
-                evaluationDiv.textContent = 'YOU WIN!!';
+                evaluationDiv.textContent = 'YOU WIN!';
                 guessesLeftDiv.textContent = '';
                 guessButton.classList.add('hidden');
                 userGuess.classList.add('hidden');
                 replayButton.classList.remove('hidden');
             } else {
                 if (guessesLeft === 0) {
-                    evaluationDiv.textContent = 'YOU SUCK!!';
+                    evaluationDiv.textContent = 'GAME OVER.';
                     guessesLeftDiv.textContent = `You have ${guessesLeft} guesses left.`;
                     guessesLeftDiv.textContent = '';
                     guessButton.classList.add('hidden');
@@ -50,8 +50,8 @@ guessButton.addEventListener('click', () => {
                     replayButton.classList.remove('hidden');
                     return;
                 }
-                evaluationDiv.textContent = `Your number is too ${guessScore}`;
-                guessesLeftDiv.textContent = `You have ${guessesLeft} guesses left.`;
+                evaluationDiv.textContent = `${userGuess.value} is too ${guessScore}.`;
+                guessesLeftDiv.textContent = `${guessesLeft} guesses left.`;
             }
         } else {
             guessesLeftDiv.textContent = "You're all out of guesses dude!";

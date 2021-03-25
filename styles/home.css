@@ -1,5 +1,86 @@
 /* add home page styles here */
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
+
+body {
+    background-color: #eee;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+.content {
+    background-color: white;
+    width: 400px;
+    height: 460px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    box-shadow: 0px 1px 3px #aaa;
+    border-radius: 40px;
+    text-align: center;
+}
+
 .hidden {
     display: none;
+}
+
+.instructions {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+input {
+    display: block;
+    margin: 40px auto;
+}
+
+.evaluation-div {
+    margin: 20px;
+    font-size: 1.5rem;
+}
+
+button {
+    padding: 14px 24px;
+    border-radius: 5px;
+    border: 0;
+    background-color: hsl(282deg 97% 67%);
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    outline: 0;
+}
+
+button:active {
+    background-color: hsl(282deg 51% 50%);
+}
+
+
+.alert {
+    color: hsl(332deg 84% 58%);
+}
+
+input {
+    display: block;
+    margin: 40px auto;
+    font-size: 3rem;
+    width: 100px;
+    text-align: center;
+    border: solid 1px #aaa;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
