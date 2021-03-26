@@ -7,17 +7,14 @@ const guessesLeftDiv = document.getElementById('guesses-left-div');
 
 export function compareNumbers(guess, answer) {
     if (guess < answer) {
-        console.log('low');
-        return 'low';
+        return -1;
     }
 
     if (guess > answer) {
-        console.log('high');
-        return 'high';
+        return 1;
     }
 
-    console.log('correct');
-    return 'correct';
+    return 0;
 }
 
 export function endGame() {

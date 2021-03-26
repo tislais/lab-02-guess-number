@@ -37,7 +37,7 @@ guessButton.addEventListener('click', () => {
         if (guessesLeft >= 0) {
             const guessScore = compareNumbers(userGuessValue, answer);
             
-            if (guessScore === 'correct') {
+            if (guessScore === 0) {
                 evaluationDiv.textContent = 'YOU WIN!';
                 endGame();
             } else {
@@ -47,7 +47,9 @@ guessButton.addEventListener('click', () => {
                     endGame();
                     return;
                 }
-                evaluationDiv.textContent = `${userGuessValue} is too ${guessScore}.`;
+                
+                if (guessScore === -1) evaluationDiv.textContent = `${userGuessValue} is too low.`;
+                if (guessScore === 1) evaluationDiv.textContent = `${userGuessValue} is too high.`;
                 guessesLeftDiv.textContent = `${guessesLeft} guesses left.`;
                 userGuess.value = '';
                 userGuess.focus();
